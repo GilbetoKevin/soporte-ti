@@ -1,0 +1,32 @@
+@use 'variables' as v;
+
+.back-header {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  background: var(--surface);
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+.back-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  h2 { margin: 0; font-size: 1.05rem; }
+}
+.back-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: v.$radius-sm;
+  padding: 0.4rem 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  font-family: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+.subview-body { max-width: 720px; margin: 0 auto; padding: 1.3rem 1.1rem 3rem; }
+.hint { font-size: 0.85rem; color: var(--text-muted); margin: 0 0 1.2rem; }

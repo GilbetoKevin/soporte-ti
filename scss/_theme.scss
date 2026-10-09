@@ -1,0 +1,53 @@
+// Paleta de marca como variables CSS (custom properties), NO variables de Sass.
+// Esta es la pieza clave que permite que el botón de modo oscuro cambie los
+// colores en tiempo real en el navegador, sin volver a compilar Sass.
+
+:root {
+  --bg1: #eaf2fc;
+  --bg2: #ffffff;
+  --surface: #ffffff;
+  --text: #1c2430;
+  --text-muted: #5b6577;
+  --border: #d7dce3;
+  --primary: #1a56db;
+  --primary-dark: #123f9e;
+  --primary-text: #ffffff;
+  --tile-light-bg: #dce9fb;
+  --tile-light-text: #14213d;
+  --accent-orange: #f2a933;
+  --logo-sq1: #bcd4f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg1: #10141b;
+    --bg2: #0b0e13;
+    --surface: #1a2029;
+    --text: #e6e9ee;
+    --text-muted: #9aa4b2;
+    --border: #2a323e;
+    --primary: #5b8fe0;
+    --primary-dark: #3f6bc4;
+    --primary-text: #0c1116;
+    --tile-light-bg: #1f2c44;
+    --tile-light-text: #dce9fb;
+    --accent-orange: #e0a13f;
+    --logo-sq1: #2c4266;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg1: #10141b;
+  --bg2: #0b0e13;
+  --surface: #1a2029;
+  --text: #e6e9ee;
+  --text-muted: #9aa4b2;
+  --border: #2a323e;
+  --primary: #5b8fe0;
+  --primary-dark: #3f6bc4;
+  --primary-text: #0c1116;
+  --tile-light-bg: #1f2c44;
+  --tile-light-text: #dce9fb;
+  --accent-orange: #e0a13f;
+  --logo-sq1: #2c4266;
+}

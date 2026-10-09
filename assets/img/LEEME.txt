@@ -1,0 +1,32 @@
+Coloca aquí las capturas de pantalla o fotos que acompañen a tus artículos
+de Soluciones.
+
+CONVENCIÓN DE NOMBRES sugerida:
+  categoria-descripcion-corta.png
+  ejemplo: impresoras-cola-de-impresion.png
+
+CÓMO VINCULAR UNA IMAGEN A UN ARTÍCULO:
+  Abre data/articulos.js y agrega los campos "imagen" y "imagenAlt" al
+  artículo correspondiente, apuntando al nombre de archivo dentro de esta
+  carpeta. Ambos campos son opcionales: un artículo sin imagen simplemente
+  no la muestra.
+
+  Ejemplo:
+    {
+      titulo: "No puedo escanear un documento",
+      categoria: "impresoras",
+      actualizado: "23 sept 2026",
+      imagen: "assets/img/impresoras-panel-escaner.png",
+      imagenAlt: "Panel de control del escáner mostrando el botón Escanear",
+      pasos: [ ... ]
+    }
+
+FORMATOS RECOMENDADOS:
+  PNG o WebP para capturas con texto de interfaz — se ven más nítidos que
+  JPG. Evita imágenes de más de 300-400 KB cada una: este proyecto se
+  sincroniza completo a cada equipo por GPO, así que el peso de las
+  imágenes se suma directo al tiempo de sincronización de todos.
+
+El archivo ejemplo-cola-de-impresion.svg es solo un marcador de posición
+para que veas cómo se ve una imagen dentro de un artículo — reemplázalo
+por tus capturas reales cuando tengas.

@@ -1,0 +1,50 @@
+@use 'variables' as v;
+
+.nav-tiles { display: flex; gap: 1.1rem; flex-wrap: wrap; justify-content: center; }
+
+.tile {
+  flex: 1 1 220px;
+  max-width: 280px;
+  border-radius: v.$radius-md;
+  padding: 1.7rem 1.4rem;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  text-decoration: none;
+  display: block;
+
+  &:focus-visible { outline: 2px solid var(--primary-dark); outline-offset: 2px; }
+
+  &.solid {
+    background: var(--primary);
+    color: var(--primary-text);
+    transition: background-color 0.15s ease;
+    &:hover, &:focus-visible { background: var(--primary-dark); }
+  }
+  &.light {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    &:hover, &:focus-visible {
+      background: var(--tile-light-bg);
+      border-color: var(--tile-light-bg);
+      color: var(--tile-light-text);
+    }
+  }
+}
+
+.tile-icon-wrap {
+  width: 52px; height: 52px; border-radius: 50%; background: #fff;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 0.85rem; color: var(--primary);
+  svg { width: 24px; height: 24px; }
+}
+.tile-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.35rem; }
+.tile-desc { font-size: 0.82rem; line-height: 1.4; opacity: 0.92; }
+.footnote { text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 1.6rem; }
+
+@media (max-width: v.$breakpoint-mobile) {
+  .nav-tiles { flex-direction: column; align-items: stretch; }
+  .tile { max-width: 100%; }
+}

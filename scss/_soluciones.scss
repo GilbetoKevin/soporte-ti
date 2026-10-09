@@ -1,0 +1,80 @@
+.search-input {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg1);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: inherit;
+  &:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
+}
+.updated-line { font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.1rem; }
+
+.pills { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.3rem; }
+.pill {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  &.active { background: var(--primary); border-color: var(--primary); color: var(--primary-text); }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+}
+summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  &::-webkit-details-marker { display: none; }
+}
+.card-title { font-weight: 600; }
+.meta { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.15rem; }
+.badge {
+  font-size: 0.72rem;
+  background: var(--tile-light-bg);
+  color: var(--primary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.row-end { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+.chev { color: var(--text-muted); transition: transform 0.15s; }
+details[open] .chev { transform: rotate(90deg); }
+
+.steps {
+  padding: 0 1.1rem 1.1rem;
+  border-top: 1px solid var(--border);
+  ol { margin: 0.8rem 0 0; padding-left: 1.2rem; }
+  li { margin-bottom: 0.55rem; line-height: 1.45; &:last-child { color: var(--text-muted); } }
+}
+
+// Imagen de ejemplo dentro de un artículo (opcional, ver data/articulos.js)
+.card-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin: 0.9rem 0;
+  background: var(--bg1);
+}
+.card-image-caption { font-size: 0.78rem; color: var(--text-muted); margin: -0.5rem 0 0.9rem; }
+
+.empty { display: none; text-align: center; color: var(--text-muted); padding: 2.2rem 1rem; }

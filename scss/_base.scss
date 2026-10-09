@@ -1,0 +1,18 @@
+@use 'variables' as v;
+
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+*, *::before, *::after { box-sizing: inherit; }
+
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: v.$font-base;
+  background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 55%);
+  min-height: 100vh;
+}

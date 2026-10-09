@@ -1,0 +1,15 @@
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+.contact-label { font-weight: 600; }
+.contact-sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.15rem; }
+.contact-value { color: var(--primary); font-weight: 600; font-size: 0.9rem; }

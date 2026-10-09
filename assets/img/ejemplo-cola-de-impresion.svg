@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Imagen de ejemplo, reemplázala con tu captura real">
+  <rect x="1" y="1" width="638" height="358" fill="#eef2fb" stroke="#c9d3e6" stroke-width="2" stroke-dasharray="8 6" rx="12"/>
+  <g fill="none" stroke="#7c8aa6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="255" y="120" width="130" height="95" rx="8"/>
+    <circle cx="290" cy="150" r="10"/>
+    <path d="M255 200 l35-35 25 25 40-45 65 65"/>
+  </g>
+  <text x="320" y="255" font-family="Arial, sans-serif" font-size="16" fill="#5b6577" text-anchor="middle">Imagen de ejemplo</text>
+  <text x="320" y="278" font-family="Arial, sans-serif" font-size="13" fill="#5b6577" text-anchor="middle">Reemplázala con tu captura real en assets/img/</text>
+</svg>

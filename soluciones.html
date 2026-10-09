@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soluciones — Soporte TI Mota-Engil</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro"></button>
+
+<div class="back-header">
+  <div class="back-header-row"><a class="back-btn" href="index.html">← Volver</a><h2>Soluciones</h2></div>
+  <input class="search-input" id="search" type="text" placeholder="Buscar por palabra clave…" aria-label="Buscar artículo">
+</div>
+<div class="subview-body">
+  <p class="updated-line">Última actualización general: 23 de septiembre de 2026</p>
+  <div class="pills" id="pills">
+    <button class="pill active" data-cat="all">Todas</button>
+    <button class="pill" data-cat="impresoras">Impresoras</button>
+    <button class="pill" data-cat="red">Red y VPN</button>
+    <button class="pill" data-cat="cuentas">Cuentas y accesos</button>
+    <button class="pill" data-cat="equipo">Equipo</button>
+  </div>
+  <div id="list"><!-- Los artículos se generan aquí, a partir de data/articulos.js --></div>
+  <p class="empty" id="empty">No hay artículos que coincidan con tu búsqueda. Intenta con otra palabra clave.</p>
+</div>
+
+<script src="js/theme-toggle.js"></script>
+<script src="data/articulos.js"></script>
+<script src="js/soluciones.js"></script>
+</body>
+</html>

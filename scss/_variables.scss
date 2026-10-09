@@ -1,0 +1,8 @@
+// Tokens que necesita el compilador de Sass (no cambian en tiempo de ejecución).
+// Los colores NO están aquí: viven como variables CSS en _theme.scss para que
+// el botón de modo claro/oscuro pueda cambiarlos sin recompilar nada.
+$font-base: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+$radius-lg: 20px;
+$radius-md: 16px;
+$radius-sm: 8px;
+$breakpoint-mobile: 640px;
