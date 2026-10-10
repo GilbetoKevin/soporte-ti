@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --bg1: #eaf2fc;
   --bg2: #ffffff;
@@ -205,6 +206,8 @@ body {
   font-family: inherit;
   text-decoration: none;
   display: block;
+  /* Asegura que el botón baje de forma suave al quitar el cursor */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .tile:focus-visible {
   outline: 2px solid var(--primary-dark);
@@ -222,12 +225,23 @@ body {
   background: var(--surface);
   color: var(--text);
   border: 1px solid var(--border);
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  /* Sombra base sutil */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  /* Tu línea exacta de transición para controlar colores y movimientos */
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.15s ease, transform 0.5s ease, box-shadow 0.5s ease;
 }
 .tile.light:hover, .tile.light:focus-visible {
-  background: var(--tile-light-bg);
-  border-color: var(--tile-light-bg);
-  color: var(--tile-light-text);
+  /* El recuadro cambia a azul con letras blancas y se eleva */
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-text);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  /* MODIFICADO: El círculo mantiene su fondo blanco y el icono su color azul */
+}
+.tile.light:hover .tile-icon-wrap, .tile.light:focus-visible .tile-icon-wrap {
+  background: #ffffff;
+  color: var(--primary);
 }
 
 .tile-icon-wrap {
