@@ -18,7 +18,18 @@ const ARTICULOS = [
     actualizado: "23 sept 2026",
     imagen: "assets/img/ejemplo-cola-de-impresion.svg",
     imagenAlt: "Ejemplo: ventana de la cola de impresión de Windows con trabajos pendientes",
-
+    pasos: [
+      "Verifica que la impresora esté encendida y tenga papel o tóner suficiente.",
+      "Revisa que el cable USB o la conexión de red esté bien conectado.",
+      "Abre la cola de impresión de Windows y cancela los trabajos atascados.",
+      "Reinicia la impresora y la computadora.",
+      "Si el problema continúa, contacta a soporte TI."
+    ]
+  },
+  {
+    titulo: "Cambiar contraseña caducada de MemWiFi",
+    categoria: "cuentas",
+    actualizado: "23 sept 2026",
     pasos: [
       "Antes de comenzar, ten a la mano tu usuario de trabajo y tu celular registrado en la cuenta.",
       "Tu nueva contraseña debe tener al menos 14 caracteres, no ser igual a tu nombre de usuario ni contenerlo y ser diferente de tus últimas 24 contraseñas.",
@@ -26,51 +37,50 @@ const ARTICULOS = [
       "Estos pasos corresponden al aviso de contraseña caducada en MemWiFi. Si tu contraseña todavía no caduca y no aparece esta pantalla, consulta el procedimiento de cambio anticipado.",
       {
         texto: "Paso 1. Haz clic en el símbolo de Wi-Fi junto al reloj de tu computadora. Selecciona MemWiFi y haz clic en Conectar.",
-        imagen: "assets/img/cambio-de-contrasena/wifi-conexion-requerida.png",
+        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/wifi-conexion-requerida.png",
         imagenAlt: "Red MemWiFi con el mensaje Se requiere una acción y el botón Conectar",
         anchoImagen: 320
       },
       {
         texto: "Paso 2. Si aparece Ha caducado la contraseña de la red remota, escribe tu nueva contraseña en Nueva contraseña. Vuelve a escribir exactamente la misma en Confirmar contraseña y haz clic en Aceptar.",
-        imagen: "assets/img/cambio-de-contrasena/wifi-cambio-de-contrasena.png",
+        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/wifi-cambio-de-contrasena.png",
         imagenAlt: "Campos para escribir y confirmar la nueva contraseña de MemWiFi",
         anchoImagen: 320
       },
       "Paso 3. Espera la respuesta de la computadora. La ventana debe cerrarse sin errores y MemWiFi debe aparecer conectada. Si la contraseña es rechazada, revisa el mensaje y los requisitos antes de intentarlo otra vez.",
       {
         texto: "Paso 4. Si aparece Seguridad de Windows, escribe tu usuario de trabajo en Nombre de usuario y tu nueva contraseña en Contraseña. Haz clic en Aceptar. Si esta ventana no aparece, continúa con el siguiente paso.",
-        imagen: "assets/img/cambio-de-contrasena/windows-inicio-de-sesion.png",
+        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/windows-inicio-de-sesion.png",
         imagenAlt: "Ventana de Seguridad de Windows para ingresar el usuario y la contraseña",
         anchoImagen: 420
       },
       "Si Windows muestra Windows necesita sus credenciales actuales, bloquea el equipo y vuelve a desbloquearlo con tu nueva contraseña. Si aparece un campo de PIN, busca Opciones de inicio de sesión y selecciona la contraseña.",
       {
         texto: "Paso 5. Abre Microsoft Teams. Si aparece Debes volver a iniciar sesión, haz clic en Iniciar sesión. Si Teams funciona normalmente, no necesitas hacer este paso.",
-        imagen: "assets/img/cambio-de-contrasena/teams-aviso-de-inicio-de-sesion.png",
+        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/teams-aviso-de-inicio-de-sesion.png",
         imagenAlt: "Aviso de Teams con el botón Iniciar sesión",
         anchoImagen: 640
       },
       {
         texto: "Paso 6. Revisa que aparezca tu cuenta de trabajo, escribe tu nueva contraseña y haz clic en Iniciar sesión. El correo de la imagen es solo un ejemplo.",
-        imagen: "assets/img/cambio-de-contrasena/microsoft-inicio-de-sesion.png",
+        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/microsoft-inicio-de-sesion.png",
         imagenAlt: "Pantalla de Microsoft para escribir la contraseña e iniciar sesión",
         anchoImagen: 420
       },
       {
         texto: "Paso 7. Si Microsoft te pide verificar tu identidad, revisa que los últimos números del teléfono correspondan al tuyo. Selecciona Enviar un mensaje de texto. Si no aparece esta verificación, continúa con la comprobación final.",
-        imagen: "assets/img/cambio-de-contrasena/microsoft-verificacion-de-identidad.png",
+        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/microsoft-verificacion-de-identidad.png",
         imagenAlt: "Opciones para verificar la identidad mediante mensaje de texto o llamada",
         anchoImagen: 420
       },
       {
         texto: "Paso 8. Abre el mensaje recibido en tu celular. Escribe ese código en la ventana de Microsoft y haz clic en Comprobar. No copies el código de la imagen: es solo un ejemplo. No compartas tu código ni tu contraseña. Si elegiste una llamada, sigue las instrucciones que escuches y confirma únicamente solicitudes que tú hayas iniciado.",
-        imagen: "assets/img/cambio-de-contrasena/microsoft-verificacion-por-sms.png",
+        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/microsoft-verificacion-por-sms.png",
         imagenAlt: "Campo para escribir el código recibido por SMS y botón Comprobar",
         anchoImagen: 420
       },
       "Comprobación final. Confirma que MemWiFi esté conectada, que puedas abrir una página de trabajo y que Teams funcione sin pedirte iniciar sesión nuevamente. ¡Listo! Usa tu nueva contraseña cuando tu cuenta de trabajo te la solicite."
     ]
-
   },
   {
     titulo: "La impresora aparece como offline",
