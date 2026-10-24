@@ -6,7 +6,7 @@
 <title>Crear reporte — Soporte TI Mota-Engil</title>
 <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="report-screen">
 
 <div class="back-header">
   <div class="back-header-row">
@@ -24,22 +24,72 @@
     </div>
   </div>
 </div>
-<div class="subview-body">
-  <p class="hint">Se abrirá tu correo con los datos listos para enviar al equipo de TI.</p>
-  <form id="report-form">
-    <label>Nombre<input id="r-nombre" type="text" required></label>
-    <label>Categoría
-      <select id="r-categoria">
-        <option>Impresoras</option><option>Red y VPN</option><option>Cuentas y accesos</option>
-        <option>Equipo</option><option>Otro</option>
-      </select>
-    </label>
-    <label>Descripción<textarea id="r-descripcion" rows="4" required></textarea></label>
-    <button type="submit" class="submit-btn">Enviar por correo</button>
-  </form>
-</div>
+
+<main class="report-page">
+  <header class="report-intro">
+    <h1>Reporta un problema</h1>
+    <p>Cuéntanos qué sucede y prepara el correo para soporte.</p>
+  </header>
+  <div class="report-layout">
+    <section class="report-form-card">
+      <form id="report-form">
+        <label for="r-obra">¿En qué obra estás?</label>
+        <select id="r-obra" required></select>
+
+        <label for="r-asunto">¿Qué problema tienes?</label>
+        <input id="r-asunto" type="text" placeholder="Ejemplo: La impresora no imprime" required>
+
+        <label for="r-descripcion">Cuéntanos qué sucede</label>
+        <textarea id="r-descripcion" rows="4" placeholder="Describe el problema y el mensaje de error, si aparece." required></textarea>
+
+        <label for="r-contacto">Número de contacto (opcional)</label>
+        <input id="r-contacto" type="tel" placeholder="Escribe un número donde podamos localizarte">
+
+        <p class="attachment-note">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11.1-8.5 8.5a5.5 5.5 0 0 1-7.8-7.8l9.2-9.2a3.7 3.7 0 0 1 5.2 5.2l-9.2 9.2a1.8 1.8 0 0 1-2.6-2.6l8.5-8.5"/></svg>
+          Si tienes capturas, adjúntalas en tu correo antes de enviarlo.
+        </p>
+        <div class="report-actions">
+          <button class="report-action primary" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Abrir Outlook o mi correo
+          </button>
+          <button class="report-action" id="copy-report" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+            Copiar información
+          </button>
+        </div>
+        <p class="report-fallback">¿No se abre tu correo? Copia la información y pégala en un mensaje nuevo.</p>
+      </form>
+    </section>
+
+    <aside class="recipient-card" aria-live="polite">
+      <h2>¿A quién se enviará?</h2>
+      <p class="selected-project" id="selected-project"></p>
+      <p class="recipient-caption">Para · Responsables de la obra</p>
+      <div id="report-responsibles" class="report-responsibles"></div>
+      <div class="report-cc">
+        <p class="recipient-caption">CC · Soporte central</p>
+        <div class="cc-address">
+          <span class="cc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </span>
+          <strong id="report-cc-address"></strong>
+        </div>
+        <p class="recipient-hint">Todos los reportes llevan copia a soporte central.</p>
+      </div>
+      <p class="recipient-info">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+        Los responsables cambian según la obra que selecciones.
+      </p>
+    </aside>
+  </div>
+  <p class="report-footer">El correo no se envía automáticamente. Revísalo y pulsa Enviar.</p>
+  <p class="report-status" id="report-status" role="status" aria-live="polite"></p>
+</main>
 
 <script src="js/theme-toggle.js"></script>
+<script src="data/equipo.js"></script>
 <script src="js/reporte.js"></script>
 </body>
 </html>

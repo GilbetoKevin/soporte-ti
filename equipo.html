@@ -6,7 +6,7 @@
 <title>Equipo de TI — Soporte TI Mota-Engil</title>
 <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="team-screen">
 
 <div class="back-header">
   <div class="back-header-row">
@@ -24,13 +24,28 @@
     </div>
   </div>
 </div>
-<div class="subview-body">
-  <p class="hint">Datos de ejemplo — reemplázalos con la información real de tu equipo.</p>
-  <div class="contact-item"><div><div class="contact-label">Mesa de ayuda</div><div class="contact-sub">Lunes a viernes, 8:00–18:00</div></div><div class="contact-value">mesa.ti@motaengil.com</div></div>
-  <div class="contact-item"><div><div class="contact-label">Teléfono directo</div><div class="contact-sub">Soporte en sitio</div></div><div class="contact-value">Ext. 1234</div></div>
-  <div class="contact-item"><div><div class="contact-label">Urgencias fuera de horario</div><div class="contact-sub">Solo incidentes críticos</div></div><div class="contact-value">55 0000 0000</div></div>
-</div>
+
+<main class="team-page">
+  <p class="updated-line">Directorio de soporte por obra o proyecto</p>
+  <div class="team-layout">
+    <aside class="project-sidebar" aria-label="Obras y proyectos">
+      <h2>Obras y proyectos</h2>
+      <label class="project-search-label" for="project-search">Buscar obra</label>
+      <input class="project-search" id="project-search" type="search" placeholder="Buscar obra..." autocomplete="off">
+      <nav class="project-list" id="project-list" aria-label="Seleccionar obra"></nav>
+      <div id="central-support" class="central-support"></div>
+    </aside>
+    <section class="team-content" aria-live="polite">
+      <header class="team-heading" id="team-heading"></header>
+      <div class="team-contact-list" id="team-contact-list"></div>
+      <p class="team-empty" id="team-empty" hidden>No se encontraron obras. Prueba otra búsqueda.</p>
+      <p class="team-disclaimer">Los nombres y contactos marcados como ejemplo deben sustituirse por la información real.</p>
+    </section>
+  </div>
+</main>
 
 <script src="js/theme-toggle.js"></script>
+<script src="data/equipo.js"></script>
+<script src="js/equipo.js"></script>
 </body>
 </html>

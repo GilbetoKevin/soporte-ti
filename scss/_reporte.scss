@@ -1,23 +1,159 @@
-label { display: block; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600; }
-input, select, textarea {
-  width: 100%;
-  margin-top: 0.4rem;
-  padding: 0.6rem 0.7rem;
+.report-page {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 1.6rem 1.25rem 1rem;
+}
+.report-intro { margin: 0 0 1.2rem 1.1rem; }
+.report-intro h1 { margin: 0 0 0.3rem; color: var(--text); font-size: clamp(1.6rem, 3vw, 2rem); }
+.report-intro p { margin: 0; color: var(--text-muted); font-size: 1.05rem; }
+.report-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(290px, 1fr);
+  align-items: stretch;
+  gap: 0.8rem;
+}
+.report-form-card,
+.recipient-card {
+  min-width: 0;
+  padding: 1.2rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 2px 10px rgba(20, 30, 50, 0.035);
+}
+.report-form-card form { display: grid; }
+.report-form-card label {
+  display: block;
+  margin: 0.7rem 0 0.35rem;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+.report-form-card input,
+.report-form-card select,
+.report-form-card textarea {
+  width: 100%;
+  margin: 0;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 7px;
   background: var(--surface);
   color: var(--text);
-  font-size: 0.95rem;
-  font-family: inherit;
+  font: inherit;
+  font-size: 0.9rem;
 }
-.submit-btn {
-  background: var(--primary);
-  color: var(--primary-text);
-  border: none;
-  padding: 0.75rem 1.4rem;
-  border-radius: 8px;
-  font-weight: 600;
+.report-form-card textarea { min-height: 90px; resize: vertical; }
+.report-form-card input::placeholder,
+.report-form-card textarea::placeholder { color: var(--text-muted); opacity: 0.8; }
+.report-form-card input:focus,
+.report-form-card select:focus,
+.report-form-card textarea:focus { outline: 2px solid var(--primary); outline-offset: 1px; border-color: var(--primary); }
+.attachment-note {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 1rem 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  svg { width: 21px; height: 21px; flex: 0 0 21px; fill: none; stroke: var(--primary); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+}
+.report-actions { display: grid; grid-template-columns: 1.2fr 1fr; gap: 0.65rem; }
+.report-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--primary);
+  border-radius: 7px;
+  background: var(--surface);
+  color: var(--primary);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 650;
   cursor: pointer;
-  font-size: 0.95rem;
-  font-family: inherit;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  svg { width: 20px; height: 20px; flex: 0 0 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  &:hover, &:focus-visible { background: var(--tile-light-bg); }
+  &:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+  &.primary { background: var(--primary); color: var(--primary-text); }
+  &.primary:hover, &.primary:focus-visible { background: var(--primary-dark); }
+}
+.report-fallback { margin: 0.75rem 0 0; color: var(--text-muted); font-size: 0.82rem; }
+.recipient-card h2 { margin: 0 0 0.75rem; font-size: 1.3rem; }
+.selected-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: var(--tile-light-bg);
+  color: var(--primary);
+  font-weight: 650;
+}
+.location-icon svg { display: block; width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.recipient-caption { margin: 0.35rem 0 0.7rem; color: var(--text-muted); font-size: 0.85rem; }
+.report-responsibles { display: grid; gap: 0.8rem; }
+.report-responsible { display: flex; align-items: flex-start; gap: 0.7rem; }
+.responsible-avatar {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 50%;
+  background: var(--tile-light-bg);
+  color: var(--primary);
+  font-weight: 700;
+}
+.report-responsible > div { display: grid; gap: 0.16rem; min-width: 0; }
+.report-responsible strong { font-size: 0.9rem; }
+.report-responsible span,
+.report-responsible a { color: var(--text-muted); font-size: 0.82rem; overflow-wrap: anywhere; }
+.report-responsible a { color: var(--primary); text-decoration: none; }
+.report-responsible a:hover { text-decoration: underline; }
+.email-pending { font-style: italic; }
+.central-fallback-note { margin: 0.1rem 0 0; color: var(--text-muted); font-size: 0.82rem; line-height: 1.45; }
+.report-cc { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border); }
+.cc-address { display: flex; align-items: center; gap: 0.65rem; overflow-wrap: anywhere; }
+.cc-address strong { font-size: 0.88rem; }
+.cc-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 50%;
+  background: var(--tile-light-bg);
+  color: var(--primary);
+  svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+}
+.recipient-hint { margin: 0.55rem 0 0; color: var(--text-muted); font-size: 0.78rem; }
+.recipient-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0.9rem 0 0;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  svg { width: 18px; height: 18px; flex: 0 0 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+}
+.report-footer { margin: 0.8rem 0 0; color: var(--text-muted); font-size: 0.75rem; text-align: center; }
+.report-status { min-height: 1.3rem; margin: 0.35rem 0 0; color: var(--primary); font-size: 0.82rem; text-align: center; }
+.report-status.error { color: #b42318; }
+
+@media (max-width: 800px) {
+  .report-layout { grid-template-columns: minmax(0, 1fr); }
+  .report-page { padding: 1.1rem 0.75rem; }
+  .report-intro { margin-left: 0.2rem; }
+}
+@media (max-width: 520px) {
+  .report-form-card,
+  .recipient-card { padding: 0.9rem; }
+  .report-actions { grid-template-columns: minmax(0, 1fr); }
 }
