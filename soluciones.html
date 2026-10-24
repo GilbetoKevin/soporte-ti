@@ -6,25 +6,47 @@
 <title>Soluciones — Soporte TI Mota-Engil</title>
 <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="solutions-screen">
 
 <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro"></button>
 
-<div class="back-header">
+<div class="back-header solutions-header">
   <div class="back-header-row"><a class="back-btn" href="index.html">← Volver</a><h2>Soluciones</h2></div>
   <input class="search-input" id="search" type="text" placeholder="Buscar por palabra clave…" aria-label="Buscar artículo">
 </div>
-<div class="subview-body">
+<div class="subview-body solutions-page">
   <p class="updated-line">Última actualización general: 23 de septiembre de 2026</p>
-  <div class="pills" id="pills">
-    <button class="pill active" data-cat="all">Todas</button>
-    <button class="pill" data-cat="impresoras">Impresoras</button>
-    <button class="pill" data-cat="red">Red y VPN</button>
-    <button class="pill" data-cat="cuentas">Cuentas y accesos</button>
-    <button class="pill" data-cat="equipo">Equipo</button>
+  <div class="solutions-layout">
+    <aside class="category-sidebar" aria-label="Categorías de soluciones">
+      <h3 class="category-heading">Categorías</h3>
+      <div class="pills" id="pills">
+        <button class="pill active" data-cat="all" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <span>Todas</span>
+        </button>
+        <button class="pill" data-cat="impresoras" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/><path d="M18 12h.01"/></svg>
+          <span>Impresoras</span>
+        </button>
+        <button class="pill" data-cat="red" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9a11 11 0 0 1 14 0"/><path d="M8 12a6.5 6.5 0 0 1 8 0"/><path d="M11 15a2 2 0 0 1 2 0"/><circle cx="12" cy="18" r="1"/></svg>
+          <span>Red y VPN</span>
+        </button>
+        <button class="pill" data-cat="cuentas" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg>
+          <span>Cuentas y accesos</span>
+        </button>
+        <button class="pill" data-cat="equipo" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <span>Equipo</span>
+        </button>
+      </div>
+    </aside>
+    <main class="solutions-results">
+      <div id="list"><!-- Los artículos se generan aquí, a partir de data/articulos.js --></div>
+      <p class="empty" id="empty">No hay artículos que coincidan con tu búsqueda. Intenta con otra palabra clave.</p>
+    </main>
   </div>
-  <div id="list"><!-- Los artículos se generan aquí, a partir de data/articulos.js --></div>
-  <p class="empty" id="empty">No hay artículos que coincidan con tu búsqueda. Intenta con otra palabra clave.</p>
 </div>
 
 <script src="js/theme-toggle.js"></script>

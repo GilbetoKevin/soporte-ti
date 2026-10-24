@@ -1,9 +1,4 @@
-// Punto de entrada — compílalo con:
-//   npm install -D sass
-//   npx sass scss/main.scss css/main.css --style=compressed --watch
-//
-// css/main.css ya viene compilado a mano en este proyecto,
-// así que las 4 páginas funcionan sin necesidad de correr nada todavía.
+// Punto de entrada SCSS. Los scripts npm compilan este archivo a css/main.css.
 
 @use 'theme';
 @use 'base';

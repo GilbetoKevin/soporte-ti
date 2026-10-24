@@ -23,14 +23,19 @@
 
 .logo-squares {
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  span { position: absolute; border-radius: 3px; }
-  .sq1 { width: 20px; height: 20px; background: var(--logo-sq1); top: 0; left: 0; }
-  .sq2 { width: 13px; height: 13px; background: var(--primary); top: 1px; right: 0; }
-  .sq3 { width: 11px; height: 11px; background: var(--accent-orange); bottom: 0; left: 5px; }
+.logo-image {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
 .logo-word { font-size: 1.1rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.04em; }

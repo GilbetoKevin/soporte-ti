@@ -11,13 +11,28 @@
     equipo: 'Equipo'
   };
 
+  function stepText(step) {
+    return typeof step === 'string' ? step : step.texto;
+  }
+
   function renderArticulos(articulos) {
     list.innerHTML = articulos.map(function (a) {
-      var searchText = (a.titulo + ' ' + a.pasos.join(' ')).toLowerCase();
+      var searchText = (a.titulo + ' ' + a.pasos.map(stepText).join(' ')).toLowerCase();
       var imagenHtml = a.imagen
         ? '<img class="card-image" src="' + a.imagen + '" alt="' + (a.imagenAlt || '') + '" loading="lazy">'
         : '';
-      var pasosHtml = a.pasos.map(function (p) { return '<li>' + p + '</li>'; }).join('');
+      var pasosHtml = a.pasos.map(function (step) {
+        var texto = stepText(step);
+        var imagenPaso = '';
+        if (typeof step === 'object' && step.imagen) {
+          var ancho = Number(step.anchoImagen);
+          var anchoHtml = Number.isFinite(ancho) && ancho > 0
+            ? ' style="width: ' + Math.min(ancho, 1200) + 'px"'
+            : '';
+          imagenPaso = '<img class="step-image" src="' + step.imagen + '" alt="' + (step.imagenAlt || '') + '" loading="lazy"' + anchoHtml + '>';
+        }
+        return '<li>' + texto + imagenPaso + '</li>';
+      }).join('');
       return (
         '<details class="card" data-cat="' + a.categoria + '" data-search="' + searchText.replace(/"/g, '&quot;') + '">' +
           '<summary>' +

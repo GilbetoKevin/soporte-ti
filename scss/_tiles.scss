@@ -45,12 +45,14 @@
       transform: translateY(-6px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 
-      /* MODIFICADO: El círculo mantiene su fondo blanco y el icono su color azul */
+      /* El círculo mantiene su fondo blanco y el icono su color azul */
       .tile-icon-wrap {
         background: #ffffff; 
         color: var(--primary);
       }
-      
+      svg {
+        stroke: currentColor;
+      }
     }
   }
 }
