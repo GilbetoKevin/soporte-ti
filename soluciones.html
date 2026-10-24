@@ -20,16 +20,34 @@
       <a class="subpage-link" href="reporte.html">Crear reporte</a>
     </nav>
     <div class="header-actions">
-      <label class="search-control" aria-label="Buscar soluciones">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-        <input class="search-input" id="search" type="search" placeholder="Buscar..." aria-label="Buscar artículo">
-      </label>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro"></button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+  <nav class="subpage-nav mobile-nav" id="mobile-nav" aria-label="Navegación principal para teléfono">
+    <a class="subpage-link active" href="soluciones.html" aria-current="page">Soluciones</a>
+    <a class="subpage-link" href="equipo.html">Equipo de TI</a>
+    <a class="subpage-link" href="reporte.html">Crear reporte</a>
+  </nav>
+  <label class="search-control" aria-label="Buscar soluciones">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+    <input class="search-input" id="search" type="search" placeholder="Buscar una solución" aria-label="Buscar artículo">
+  </label>
 </div>
 <div class="subview-body solutions-page">
   <p class="updated-line">Última actualización general: 23 de septiembre de 2026</p>
+  <div class="mobile-category-select">
+    <label class="visually-hidden" for="category-select">Filtrar por categoría</label>
+    <select id="category-select">
+      <option value="all">Todas las categorías</option>
+      <option value="impresoras">Impresoras</option>
+      <option value="red">Red y VPN</option>
+      <option value="cuentas">Cuentas y accesos</option>
+      <option value="equipo">Equipo</option>
+    </select>
+  </div>
   <div class="solutions-layout">
     <aside class="category-sidebar" aria-label="Categorías de soluciones">
       <h3 class="category-heading">Categorías</h3>
@@ -57,6 +75,7 @@
       </div>
     </aside>
     <main class="solutions-results">
+      <h2 class="guides-heading">Guías disponibles <span id="guide-count"></span></h2>
       <div id="list"><!-- Los artículos se generan aquí, a partir de data/articulos.js --></div>
       <p class="empty" id="empty">No hay artículos que coincidan con tu búsqueda. Intenta con otra palabra clave.</p>
     </main>
@@ -64,6 +83,7 @@
 </div>
 
 <script src="js/theme-toggle.js"></script>
+<script src="js/mobile-nav.js"></script>
 <script src="data/articulos.js"></script>
 <script src="js/soluciones.js"></script>
 </body>

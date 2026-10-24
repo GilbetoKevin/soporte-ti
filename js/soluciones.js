@@ -3,6 +3,8 @@
   var pills = document.querySelectorAll('.pill');
   var searchInput = document.getElementById('search');
   var emptyMsg = document.getElementById('empty');
+  var categorySelect = document.getElementById('category-select');
+  var guideCount = document.getElementById('guide-count');
 
   var categoryLabels = {
     impresoras: 'Impresoras',
@@ -90,16 +92,30 @@
       card.style.display = show ? '' : 'none';
       if (show) visible++;
     });
+    guideCount.textContent = visible;
     emptyMsg.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  function setCategory(category) {
+    activeCat = category;
+    pills.forEach(function (pill) {
+      var selected = pill.dataset.cat === category;
+      pill.classList.toggle('active', selected);
+      pill.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    });
+    categorySelect.value = category;
+    applyFilter();
   }
 
   pills.forEach(function (p) {
     p.addEventListener('click', function () {
-      pills.forEach(function (x) { x.classList.remove('active'); });
-      p.classList.add('active');
-      activeCat = p.dataset.cat;
-      applyFilter();
+      setCategory(p.dataset.cat);
     });
   });
+  categorySelect.addEventListener('change', function () {
+    setCategory(categorySelect.value);
+  });
   searchInput.addEventListener('input', applyFilter);
+
+  setCategory(activeCat);
 })();

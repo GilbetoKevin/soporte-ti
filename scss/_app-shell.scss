@@ -79,17 +79,52 @@
 .solutions-header .theme-toggle {
   margin-left: auto;
 }
+.menu-toggle,
+.mobile-nav { display: none; }
 .subview-body { max-width: 720px; margin: 0 auto; padding: 1.3rem 1.1rem 3rem; }
 .hint { font-size: 0.85rem; color: var(--text-muted); margin: 0 0 1.2rem; }
 
 @media (max-width: v.$breakpoint-mobile) {
-  .back-header { padding: 0.65rem 0.55rem; }
-  .back-header-row { grid-template-columns: max-content minmax(0, 1fr) 36px; gap: 0.35rem; }
-  .home-btn { height: 36px; gap: 0.25rem; padding: 0 0.3rem; }
-  .home-btn img { width: 22px; height: 22px; }
-  .home-btn .logo-word { font-size: 0.62rem; letter-spacing: 0; }
-  .subpage-nav { gap: 0.25rem; }
-  .subpage-link { padding: 0.55rem 0.6rem; font-size: 0.78rem; border-radius: 8px; }
-  .header-actions { min-height: 36px; }
-  .back-header .theme-toggle { width: 36px; height: 36px; }
+  .back-header { padding: 0.65rem 0.8rem; }
+  .back-header-row { grid-template-columns: minmax(0, 1fr) auto; gap: 0.75rem; }
+  .back-header .home-btn { height: 40px; gap: 0.35rem; padding: 0; border: 0; }
+  .back-header .home-btn img { width: 34px; height: 34px; }
+  .back-header .home-btn .logo-word { font-size: 0.95rem; }
+  .back-header-row > .subpage-nav { display: none; }
+  .header-actions { min-height: 40px; gap: 0.55rem; }
+  .back-header .theme-toggle { width: 40px; height: 40px; }
+  .menu-toggle {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+    span { width: 18px; height: 2px; border-radius: 2px; background: currentColor; }
+    &:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+  }
+  .back-header .mobile-nav {
+    position: absolute;
+    top: calc(100% - 0.35rem);
+    right: 0.8rem;
+    z-index: 20;
+    min-width: 190px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    box-shadow: 0 8px 24px rgba(20, 30, 50, 0.16);
+    &.open { display: flex; }
+    .subpage-link { padding: 0.75rem 0.85rem; font-size: 0.92rem; }
+  }
 }

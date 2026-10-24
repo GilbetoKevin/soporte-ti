@@ -21,8 +21,16 @@
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro"></button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+  <nav class="subpage-nav mobile-nav" id="mobile-nav" aria-label="Navegación principal para teléfono">
+    <a class="subpage-link" href="soluciones.html">Soluciones</a>
+    <a class="subpage-link" href="equipo.html">Equipo de TI</a>
+    <a class="subpage-link active" href="reporte.html" aria-current="page">Crear reporte</a>
+  </nav>
 </div>
 
 <main class="report-page">
@@ -89,6 +97,7 @@
 </main>
 
 <script src="js/theme-toggle.js"></script>
+<script src="js/mobile-nav.js"></script>
 <script src="data/equipo.js"></script>
 <script src="js/reporte.js"></script>
 </body>
