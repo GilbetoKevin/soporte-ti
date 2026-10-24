@@ -168,7 +168,7 @@ details[open] .chev { transform: rotate(90deg); }
 .steps {
   padding: 0 1.1rem 1.1rem;
   border-top: 1px solid var(--border);
-  ol { margin: 0.8rem 0 0; padding-left: 1.2rem; }
+  ul { margin: 0.8rem 0 0; padding: 0; list-style: none; }
   li { margin-bottom: 0.55rem; line-height: 1.45; &:last-child { color: var(--text-muted); } }
 }
 .step-image {
@@ -183,6 +183,31 @@ details[open] .chev { transform: rotate(90deg); }
   border-radius: 8px;
   background: var(--bg1);
 }
+.related-articles {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+  h3 { margin: 0 0 0.55rem; font-size: 0.92rem; }
+}
+.related-card {
+  margin-top: 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+  summary {
+    padding: 0.7rem 0.85rem;
+    color: var(--primary);
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+  &[open] > summary { border-bottom: 1px solid var(--border); }
+}
+.related-content {
+  padding: 0.1rem 0.85rem 0.85rem;
+  ul { margin-top: 0.65rem; }
+}
+.related-error { color: #b42318; font-size: 0.82rem; }
 
 // Imagen de ejemplo dentro de un artículo (opcional, ver data/articulos.js)
 .card-image {

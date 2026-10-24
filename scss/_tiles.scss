@@ -67,9 +67,58 @@
 }
 .tile-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.35rem; }
 .tile-desc { font-size: 0.82rem; line-height: 1.4; opacity: 0.92; }
-.footnote { text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 1.6rem; }
+.footnote { display: flex; align-items: center; justify-content: center; gap: 0.6rem; text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 1.6rem; }
+.footnote-icon { font-size: 1.5rem; line-height: 1; }
 
 @media (max-width: v.$breakpoint-mobile) {
-  .nav-tiles { flex-direction: column; align-items: stretch; }
-  .tile { max-width: 100%; }
+  .nav-tiles { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+  .tile {
+    position: relative;
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr) 18px;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 0.7rem;
+    max-width: 100%;
+    min-height: 92px;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: none;
+    transition: border-color 0.18s ease, background-color 0.18s ease;
+    &::after {
+      content: "›";
+      grid-column: 3;
+      grid-row: 1 / 3;
+      justify-self: center;
+      color: var(--text-muted);
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1;
+    }
+    &:hover, &:focus-visible {
+      transform: none;
+      box-shadow: none;
+      background: var(--tile-light-bg);
+      border-color: var(--primary);
+      color: var(--text);
+    }
+    &:hover::after, &:focus-visible::after { color: var(--primary); }
+  }
+  .tile-icon-wrap {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 58px;
+    height: 58px;
+    margin: 0;
+    border-radius: 15px;
+    background: var(--tile-light-bg);
+    svg { width: 32px; height: 32px; }
+  }
+  .tile-title { grid-column: 2; grid-row: 1; align-self: end; margin: 0 0 0.15rem; font-size: clamp(1rem, 4.4vw, 1.2rem); line-height: 1.15; }
+  .tile-desc { grid-column: 2; grid-row: 2; align-self: start; color: var(--text-muted); font-size: clamp(0.78rem, 3.4vw, 0.92rem); line-height: 1.25; opacity: 1; }
+  .footnote { margin-top: 0.75rem; font-size: 0.72rem; line-height: 1.25; }
+  .footnote-icon { font-size: 1.2rem; }
 }
