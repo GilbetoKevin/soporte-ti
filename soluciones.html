@@ -8,11 +8,25 @@
 </head>
 <body class="solutions-screen">
 
-<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro"></button>
-
 <div class="back-header solutions-header">
-  <div class="back-header-row"><a class="back-btn" href="index.html">← Volver</a><h2>Soluciones</h2></div>
-  <input class="search-input" id="search" type="text" placeholder="Buscar por palabra clave…" aria-label="Buscar artículo">
+  <div class="back-header-row">
+    <a class="home-btn" href="index.html" aria-label="Volver al inicio" title="Inicio">
+      <img src="assets/img/logo.png" alt="">
+      <span class="logo-word">MOTA-ENGIL</span>
+    </a>
+    <nav class="subpage-nav" aria-label="Navegación principal">
+      <a class="subpage-link active" href="soluciones.html" aria-current="page">Soluciones</a>
+      <a class="subpage-link" href="equipo.html">Equipo de TI</a>
+      <a class="subpage-link" href="reporte.html">Crear reporte</a>
+    </nav>
+    <div class="header-actions">
+      <label class="search-control" aria-label="Buscar soluciones">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        <input class="search-input" id="search" type="search" placeholder="Buscar..." aria-label="Buscar artículo">
+      </label>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro"></button>
+    </div>
+  </div>
 </div>
 <div class="subview-body solutions-page">
   <p class="updated-line">Última actualización general: 23 de septiembre de 2026</p>

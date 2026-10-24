@@ -8,10 +8,21 @@
 </head>
 <body>
 
-<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro"></button>
-
 <div class="back-header">
-  <div class="back-header-row"><a class="back-btn" href="index.html">← Volver</a><h2>Equipo de TI</h2></div>
+  <div class="back-header-row">
+    <a class="home-btn" href="index.html" aria-label="Volver al inicio" title="Inicio">
+      <img src="assets/img/logo.png" alt="">
+      <span class="logo-word">MOTA-ENGIL</span>
+    </a>
+    <nav class="subpage-nav" aria-label="Navegación principal">
+      <a class="subpage-link" href="soluciones.html">Soluciones</a>
+      <a class="subpage-link active" href="equipo.html" aria-current="page">Equipo de TI</a>
+      <a class="subpage-link" href="reporte.html">Crear reporte</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro"></button>
+    </div>
+  </div>
 </div>
 <div class="subview-body">
   <p class="hint">Datos de ejemplo — reemplázalos con la información real de tu equipo.</p>
