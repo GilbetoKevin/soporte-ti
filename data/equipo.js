@@ -43,8 +43,8 @@ const PROYECTOS = [
   {
     nombre: "Monterrey",
     contactos: [
-      { nombre: "Cristian Castán", puesto: "Coordinador de Sistemas de Información", iniciales: "CC", correo: "", telefono: "" },
-      { nombre: "Gilberto Vazquez (Mexico)", puesto: "Auxiliar de Sistemas", iniciales: "GV", correo: "gilberto.vazquez@mota-engil.com.mx", telefono: "" }
+      { nombre: "Cristian Castán", puesto: "Coordinador de Sistemas de Información", iniciales: "CC", correo: "cristian.castan@mota-engil.com.mx", telefono: "+52 55 4177 0977" },
+      { nombre: "Gilberto Vazquez (Mexico)", puesto: "Auxiliar de Sistemas", iniciales: "GV", correo: "gilberto.vazquez@mota-engil.com.mx", telefono: "+52 55 8004 5626" }
     ]
   },
   {
