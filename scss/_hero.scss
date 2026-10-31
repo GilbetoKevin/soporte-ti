@@ -7,7 +7,19 @@
   padding: 2.5rem 1.2rem 3rem;
 }
 
-.home-topbar { display: none; }
+.home-topbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 0.8rem 0.9rem;
+  pointer-events: none;
+  .logo-mark { display: none; }
+  .theme-toggle { pointer-events: auto; }
+}
 
 .hero-panel {
   background: var(--surface);
@@ -47,7 +59,9 @@
 
 @media (max-width: v.$breakpoint-mobile) {
   .home-topbar {
-    display: flex;
+    position: relative;
+    top: auto;
+    right: auto;
     align-items: center;
     justify-content: space-between;
     min-height: 64px;

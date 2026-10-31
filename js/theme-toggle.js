@@ -18,8 +18,10 @@
   var stored = getStoredTheme();
   if (stored === 'light' || stored === 'dark') {
     document.documentElement.setAttribute('data-theme', stored);
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
   }
-  paintToggle(stored);
+  paintToggle(stored === 'dark' ? 'dark' : 'light');
 
   themeBtn.addEventListener('click', function () {
     var current = document.documentElement.getAttribute('data-theme');
