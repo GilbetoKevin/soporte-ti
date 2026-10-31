@@ -17,7 +17,7 @@ const ARTICULOS = [
     id: "cambiar-contrasena-memwifi",
     titulo: "Cambiar contraseña caducada de MemWiFi",
     categoria: "cuentas",
-    actualizado: "23 sept 2026",
+    actualizado: "30 oct 2026",
     relacionados: ["iniciar-sesion-microsoft"],
     pasos: [
       "Antes de comenzar, ten a la mano tu usuario de trabajo y tu celular registrado en la cuenta.",
@@ -52,7 +52,7 @@ const ARTICULOS = [
     id: "iniciar-sesion-microsoft",
     titulo: "Volver a iniciar sesión en Microsoft y Teams",
     categoria: "cuentas",
-    actualizado: "23 sept 2026",
+    actualizado: "30 oct 2026",
     pasos: [
       {
         texto: "Paso 1. Abre Microsoft Teams. Si aparece el aviso para iniciar sesión de nuevo, selecciona Iniciar sesión. Si Teams funciona normalmente, no necesitas hacer este paso.",
