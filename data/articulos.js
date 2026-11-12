@@ -9,76 +9,45 @@
 // captura de pantalla en la carpeta assets/img/.
 // Cada paso puede ser texto simple o un objeto con imagen opcional:
 // { texto: "Abre Configuración.", imagen: "assets/img/configuracion.png", imagenAlt: "Ventana de Configuración" }
-// Para ajustar el ancho de una imagen en píxeles, agrega anchoImagen: 320.
+// Para limitar el ancho máximo de una imagen en píxeles, agrega anchoImagen: 320.
 // Para desplegar otro artículo dentro de este, agrega relacionados: ["id-del-articulo"].
 
 const ARTICULOS = [
   {
-    id: "cambiar-contrasena-memwifi",
-    titulo: "Cambiar contraseña caducada de MemWiFi",
-    categoria: "cuentas",
-    actualizado: "30 oct 2026",
-    relacionados: ["iniciar-sesion-microsoft"],
+    id: "solucionar-conexion-memwifi",
+    titulo: "Manual para solucionar problemas de conexión a la red MemWiFi",
+    categoria: "red",
+    actualizado: "11 nov 2026",
     pasos: [
-      "Antes de comenzar, ten a la mano tu usuario de trabajo y tu celular registrado en la cuenta.",
-      "Tu nueva contraseña debe tener al menos 14 caracteres, no ser igual a tu nombre de usuario ni contenerlo y ser diferente de tus últimas 24 contraseñas.",
-      "Incluye al menos 3 de estos 4 tipos de caracteres: mayúsculas (A–Z), minúsculas (a–z), números (0–9) y símbolos como %, $, ?, coma, _ o #.",
-      "Estos pasos corresponden al aviso de contraseña caducada en MemWiFi. Si tu contraseña todavía no caduca y no aparece esta pantalla, consulta el procedimiento de cambio anticipado.",
+      "Si tu computadora muestra el mensaje «Se requiere una acción» al intentar conectarte a MemWiFi, es posible que tu contraseña haya caducado o que necesites actualizar tus datos de acceso. Sigue las instrucciones según la pantalla que aparezca.",
       {
-        texto: "Paso 1. Haz clic en el símbolo de Wi-Fi junto al reloj de tu computadora. Selecciona MemWiFi y haz clic en Conectar.",
-        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/wifi-conexion-requerida.png",
-        imagenAlt: "Red MemWiFi con el mensaje Se requiere una acción y el botón Conectar",
-        anchoImagen: 320
-      },
-      {
-        texto: "Paso 2. Si aparece Ha caducado la contraseña de la red remota, escribe tu nueva contraseña en Nueva contraseña. Vuelve a escribir exactamente la misma en Confirmar contraseña y haz clic en Aceptar.",
-        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/wifi-cambio-de-contrasena.png",
-        imagenAlt: "Campos para escribir y confirmar la nueva contraseña de MemWiFi",
-        anchoImagen: 320
-      },
-      "Paso 3. Espera la respuesta de la computadora. La ventana debe cerrarse sin errores y MemWiFi debe aparecer conectada. Si la contraseña es rechazada, revisa el mensaje y los requisitos antes de intentarlo otra vez.",
-      {
-        texto: "Paso 4. Si aparece Seguridad de Windows, escribe tu usuario de trabajo en Nombre de usuario y tu nueva contraseña en Contraseña. Haz clic en Aceptar. Si esta ventana no aparece, continúa con el siguiente paso.",
-        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/windows-inicio-de-sesion.png",
-        imagenAlt: "Ventana de Seguridad de Windows para ingresar el usuario y la contraseña",
-        anchoImagen: 420
-      },
-      "Si Windows muestra que necesita tus credenciales actuales, bloquea el equipo y vuelve a desbloquearlo con tu nueva contraseña. Si aparece un campo de PIN, busca Opciones de inicio de sesión y selecciona la contraseña.",
-      "Si Teams o Microsoft te pide iniciar sesión de nuevo, abre el artículo relacionado que aparece al final de esta guía.",
-      "Comprobación final. Confirma que MemWiFi esté conectada y que puedas abrir una página de trabajo. Usa tu nueva contraseña cuando tu cuenta de trabajo te la solicite."
-    ]
-  },
-  {
-    id: "iniciar-sesion-microsoft",
-    titulo: "Volver a iniciar sesión en Microsoft y Teams",
-    categoria: "cuentas",
-    actualizado: "30 oct 2026",
-    pasos: [
-      {
-        texto: "Paso 1. Abre Microsoft Teams. Si aparece el aviso para iniciar sesión de nuevo, selecciona Iniciar sesión. Si Teams funciona normalmente, no necesitas hacer este paso.",
-        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/teams-aviso-de-inicio-de-sesion.png",
-        imagenAlt: "Aviso de Teams con la opción para iniciar sesión",
+        texto: "Paso 1. Abre la lista de redes Wi-Fi y selecciona MemWiFi. Verifica que esté marcada la opción Conectarse automáticamente y haz clic en Conectar. Después, aparecerá una ventana solicitando tu usuario y contraseña o indicando que tu contraseña ha caducado.",
+        imagen: "assets/img/memwifi-conexion-paso-1.webp",
+        imagenAlt: "Selecciona la red MemWiFi, deja activada la conexión automática y haz clic en Conectar",
         anchoImagen: 640
       },
+      "Paso 2. Si aparece el mensaje «Ha caducado la contraseña de la red remota», crea una nueva contraseña. Debe cumplir todos estos requisitos:",
+      "Tener al menos 15 caracteres.",
+      "No contener tu nombre de usuario ni partes de él.",
+      "Incluir al menos 2 caracteres especiales, como @, #, $, % o &.",
+      "Contener números.",
+      "Incluir letras mayúsculas y minúsculas.",
       {
-        texto: "Paso 2. Comprueba que aparezca tu cuenta de trabajo, escribe tu nueva contraseña y selecciona Iniciar sesión. El correo de la imagen es solo un ejemplo.",
-        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/microsoft-inicio-de-sesion.png",
-        imagenAlt: "Pantalla de Microsoft para escribir la contraseña e iniciar sesión",
-        anchoImagen: 420
+        texto: "Escribe la nueva contraseña en el campo Nueva contraseña y vuelve a escribir exactamente la misma en Confirmar contraseña. Haz clic en Aceptar.",
+        imagen: "assets/img/memwifi-contrasena-paso-2.webp",
+        imagenAlt: "Escribe y confirma la nueva contraseña, y haz clic en Aceptar",
+        anchoImagen: 640
       },
+      "Si la contraseña cumple los requisitos, el equipo debería conectarse a MemWiFi. Importante: esta también será la contraseña para iniciar sesión en tu computadora, correo electrónico y otros servicios corporativos que utilicen la misma cuenta.",
       {
-        texto: "Paso 3. Si Microsoft solicita verificar tu identidad, confirma que los últimos números del teléfono correspondan al tuyo y selecciona Enviar un mensaje de texto. Si no aparece esta verificación, continúa con la comprobación final.",
-        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/microsoft-verificacion-de-identidad.png",
-        imagenAlt: "Opciones para verificar la identidad mediante mensaje de texto o llamada",
-        anchoImagen: 420
+        texto: "Paso 3. Si aparece una ventana de Seguridad de Windows, en Nombre de usuario escribe tu usuario de la empresa (por ejemplo, juan.perez). En Contraseña escribe tu contraseña actual y haz clic en Aceptar.",
+        imagen: "assets/img/memwifi-credenciales-paso-3.webp",
+        imagenAlt: "Escribe el usuario de la empresa y la contraseña en la ventana de Seguridad de Windows, y haz clic en Aceptar",
+        anchoImagen: 640
       },
-      {
-        texto: "Paso 4. Escribe el código recibido en tu celular en la ventana de Microsoft y selecciona Comprobar. No copies el código de la imagen: es solo un ejemplo. No compartas tu código ni tu contraseña. Si elegiste una llamada, sigue las instrucciones y confirma solo solicitudes que tú hayas iniciado.",
-        imagen: "assets/img/cambio-de-contrasena/cambio-de-contrasena/microsoft-verificacion-por-sms.png",
-        imagenAlt: "Campo para escribir el código recibido por SMS y botón Comprobar",
-        anchoImagen: 420
-      },
-      "Comprueba que Teams funcione y no vuelva a pedirte iniciar sesión. Si el problema continúa, contacta a soporte TI."
+      "Si los datos son correctos, tu computadora debería conectarse a MemWiFi.",
+      "Paso 4. Actualiza la contraseña en tu computadora: cuando ya estés conectado a MemWiFi, presiona Windows + L para bloquear el equipo. En la pantalla de inicio de sesión, escribe tu nueva contraseña para desbloquearlo y comprobar que puedes iniciar sesión con ella.",
+      "¿El problema continúa? Si después de realizar estos pasos no puedes conectarte a MemWiFi, comunícate con el área de Soporte TI para recibir ayuda."
     ]
   }
 ];

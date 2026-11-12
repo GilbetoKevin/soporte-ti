@@ -222,8 +222,6 @@
   .card .row-end { gap: 0; }
   .card .chev { color: var(--primary); font-size: 1.6rem; line-height: 1; }
   .steps { padding: 0 0.9rem 0.9rem; }
-  .step-image,
-  .card-image { max-width: 100%; height: auto; }
   .related-card > summary { min-height: 48px; }
   .empty { padding: 1.5rem 0.6rem; font-size: 0.9rem; }
 }
@@ -273,16 +271,30 @@ summary {
 details[open] .chev { transform: rotate(90deg); }
 
 .steps {
+  min-width: 0;
   padding: 0 1.1rem 1.1rem;
   border-top: 1px solid var(--border);
-  ul { margin: 0.8rem 0 0; padding: 0; list-style: none; }
-  li { margin-bottom: 0.55rem; line-height: 1.45; &:last-child { color: var(--text-muted); } }
+  ul { min-width: 0; margin: 0.8rem 0 0; padding: 0; list-style: none; }
+  li { min-width: 0; margin-bottom: 0.55rem; line-height: 1.45; &:last-child { color: var(--text-muted); } }
 }
 .step-image {
   display: block;
-  width: 100%;
-  max-width: 520px;
+  width: auto;
+  max-width: min(100%, var(--step-image-max-width, 520px));
   max-height: 360px;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  margin: 0.75rem 0 0.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg1);
+}
+.card-image {
+  display: block;
+  width: auto;
+  max-width: min(100%, 520px);
+  height: auto;
   object-fit: contain;
   object-position: left center;
   margin: 0.75rem 0 0.25rem;

@@ -24,7 +24,7 @@
       if (typeof step === 'object' && step.imagen) {
         var ancho = Number(step.anchoImagen);
         var anchoHtml = Number.isFinite(ancho) && ancho > 0
-          ? ' style="width: ' + Math.min(ancho, 1200) + 'px"'
+          ? ' style="--step-image-max-width: ' + Math.min(ancho, 1200) + 'px"'
           : '';
         imagenPaso = '<img class="step-image" src="' + step.imagen + '" alt="' + (step.imagenAlt || '') + '" loading="lazy"' + anchoHtml + '>';
       }

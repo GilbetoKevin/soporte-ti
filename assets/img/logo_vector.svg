@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254">
+  <title>Logo geométrico azul, naranja y franjas negras</title>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0175CA"/>
+      <stop offset="1" stop-color="#006FC2"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FCB02B"/>
+      <stop offset="1" stop-color="#FFAA20"/>
+    </linearGradient>
+  </defs>
+  <rect x="604" y="158" width="45" height="937" fill="#000000"/>
+  <rect x="130" y="627" width="994" height="23" fill="#000000"/>
+  <rect x="646" y="155" width="473" height="472" fill="url(#blue)"/>
+  <rect x="128" y="650" width="485" height="443" fill="url(#orange)"/>
+</svg>
