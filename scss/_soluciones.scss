@@ -222,6 +222,8 @@
   .card .row-end { gap: 0; }
   .card .chev { color: var(--primary); font-size: 1.6rem; line-height: 1; }
   .steps { padding: 0 0.9rem 0.9rem; }
+  .steps .step-image,
+  .steps .card-image { width: 100%; max-width: 100%; max-height: none; height: auto; }
   .related-card > summary { min-height: 48px; }
   .empty { padding: 1.5rem 0.6rem; font-size: 0.9rem; }
 }
@@ -281,7 +283,7 @@ details[open] .chev { transform: rotate(90deg); }
   display: block;
   width: auto;
   max-width: min(100%, var(--step-image-max-width, 520px));
-  max-height: 360px;
+  max-height: none;
   height: auto;
   object-fit: contain;
   object-position: left center;

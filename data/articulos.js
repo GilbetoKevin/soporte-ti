@@ -15,39 +15,31 @@
 const ARTICULOS = [
   {
     id: "solucionar-conexion-memwifi",
-    titulo: "Manual para solucionar problemas de conexión a la red MemWiFi",
+    titulo: "Manual para resolver problemas de conexión a MemWiFi",
     categoria: "red",
     actualizado: "11 nov 2026",
     pasos: [
-      "Si tu computadora muestra el mensaje «Se requiere una acción» al intentar conectarte a MemWiFi, es posible que tu contraseña haya caducado o que necesites actualizar tus datos de acceso. Sigue las instrucciones según la pantalla que aparezca.",
+      "Si al conectarte a MemWiFi aparece el mensaje «Se requiere una acción», sigue estos pasos según lo que muestre tu pantalla.",
       {
-        texto: "Paso 1. Abre la lista de redes Wi-Fi y selecciona MemWiFi. Verifica que esté marcada la opción Conectarse automáticamente y haz clic en Conectar. Después, aparecerá una ventana solicitando tu usuario y contraseña o indicando que tu contraseña ha caducado.",
+        texto: "<strong>1. Selecciona MemWiFi</strong><br>Abre la lista de redes Wi-Fi, selecciona MemWiFi, deja activada la opción Conectarse automáticamente y haz clic en Conectar. Después, puede aparecer una solicitud para cambiar la contraseña o para escribir tus credenciales.",
         imagen: "assets/img/memwifi-conexion-paso-1.webp",
         imagenAlt: "Selecciona la red MemWiFi, deja activada la conexión automática y haz clic en Conectar",
-        anchoImagen: 640
+        anchoImagen: 380
       },
-      "Paso 2. Si aparece el mensaje «Ha caducado la contraseña de la red remota», crea una nueva contraseña. Debe cumplir todos estos requisitos:",
-      "Tener al menos 15 caracteres.",
-      "No contener tu nombre de usuario ni partes de él.",
-      "Incluir al menos 2 caracteres especiales, como @, #, $, % o &.",
-      "Contener números.",
-      "Incluir letras mayúsculas y minúsculas.",
       {
-        texto: "Escribe la nueva contraseña en el campo Nueva contraseña y vuelve a escribir exactamente la misma en Confirmar contraseña. Haz clic en Aceptar.",
+        texto: "<strong>2. Si la contraseña caducó, crea una nueva</strong><br>Si aparece el mensaje «Ha caducado la contraseña de la red remota», escribe una contraseña nueva en Nueva contraseña y vuelve a escribirla en Confirmar contraseña. Luego, haz clic en Aceptar.<br><br><strong>La nueva contraseña debe:</strong><br>- Tener al menos 15 caracteres.<br>- Incluir letras mayúsculas y minúsculas, números y al menos 2 caracteres especiales (por ejemplo: @, #, $, % o &amp;).<br>- No contener tu nombre de usuario ni partes de este.<br><br><strong>Ten en cuenta:</strong> esta contraseña también se usará para iniciar sesión en tu computadora, correo electrónico y otros servicios corporativos vinculados a la misma cuenta.",
         imagen: "assets/img/memwifi-contrasena-paso-2.webp",
         imagenAlt: "Escribe y confirma la nueva contraseña, y haz clic en Aceptar",
-        anchoImagen: 640
+        anchoImagen: 380
       },
-      "Si la contraseña cumple los requisitos, el equipo debería conectarse a MemWiFi. Importante: esta también será la contraseña para iniciar sesión en tu computadora, correo electrónico y otros servicios corporativos que utilicen la misma cuenta.",
       {
-        texto: "Paso 3. Si aparece una ventana de Seguridad de Windows, en Nombre de usuario escribe tu usuario de la empresa (por ejemplo, juan.perez). En Contraseña escribe tu contraseña actual y haz clic en Aceptar.",
+        texto: "<strong>3. Si Windows solicita tus credenciales, escríbelas</strong><br>En la ventana Seguridad de Windows, escribe tu usuario de empresa (por ejemplo, juan.perez) y tu contraseña actual. Haz clic en Aceptar. Si los datos son correctos, el equipo debería conectarse a MemWiFi.",
         imagen: "assets/img/memwifi-credenciales-paso-3.webp",
         imagenAlt: "Escribe el usuario de la empresa y la contraseña en la ventana de Seguridad de Windows, y haz clic en Aceptar",
-        anchoImagen: 640
+        anchoImagen: 380
       },
-      "Si los datos son correctos, tu computadora debería conectarse a MemWiFi.",
-      "Paso 4. Actualiza la contraseña en tu computadora: cuando ya estés conectado a MemWiFi, presiona Windows + L para bloquear el equipo. En la pantalla de inicio de sesión, escribe tu nueva contraseña para desbloquearlo y comprobar que puedes iniciar sesión con ella.",
-      "¿El problema continúa? Si después de realizar estos pasos no puedes conectarte a MemWiFi, comunícate con el área de Soporte TI para recibir ayuda."
+      "<strong>4. Comprueba que puedes iniciar sesión con la nueva contraseña</strong><br>Después de conectarte, presiona Windows + L para bloquear la computadora. En la pantalla de inicio de sesión, escribe la nueva contraseña para desbloquearla.",
+      "<strong>¿Sigues sin poder conectarte?</strong><br>Comunícate con Soporte TI para recibir ayuda."
     ]
   }
 ];
