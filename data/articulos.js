@@ -27,7 +27,7 @@ const ARTICULOS = [
         anchoImagen: 380
       },
       {
-        texto: "<strong>2. Si la contraseña caducó, crea una nueva</strong><br>Si aparece el mensaje «Ha caducado la contraseña de la red remota», escribe una contraseña nueva en Nueva contraseña y vuelve a escribirla en Confirmar contraseña. Luego, haz clic en Aceptar.<br><br><strong>La nueva contraseña debe:</strong><br>- Tener al menos 15 caracteres.<br>- Incluir letras mayúsculas y minúsculas, números y al menos 2 caracteres especiales (por ejemplo: @, #, $, % o &amp;).<br>- No contener tu nombre de usuario ni partes de este.<br><br><strong>Ten en cuenta:</strong> esta contraseña también se usará para iniciar sesión en tu computadora, correo electrónico y otros servicios corporativos vinculados a la misma cuenta.",
+        texto: "<strong>2. Si la contraseña caducó, crea una nueva</strong><br>Si aparece el mensaje «Ha caducado la contraseña de la red remota», escribe una contraseña nueva en Nueva contraseña y vuelve a escribirla en Confirmar contraseña. Luego, haz clic en Aceptar.",
         imagen: "assets/img/memwifi-contrasena-paso-2.webp",
         imagenAlt: "Escribe y confirma la nueva contraseña, y haz clic en Aceptar",
         anchoImagen: 380
@@ -39,6 +39,7 @@ const ARTICULOS = [
         anchoImagen: 380
       },
       "<strong>4. Comprueba que puedes iniciar sesión con la nueva contraseña</strong><br>Después de conectarte, presiona Windows + L para bloquear la computadora. En la pantalla de inicio de sesión, escribe la nueva contraseña para desbloquearla.",
+      "<strong>Ten en cuenta:</strong> esta contraseña también se usará para iniciar sesión en tu computadora, correo electrónico y otros servicios corporativos vinculados a la misma cuenta.",
       "<strong>¿Sigues sin poder conectarte?</strong><br>Comunícate con Soporte TI para recibir ayuda."
     ]
   }
